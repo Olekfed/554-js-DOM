@@ -1,12 +1,12 @@
-const h1 = document.querySelector('h1');
+const allH1 = document.querySelectorAll('h1');
 for (const h1 of allH1) {
-h1.innerHTML +=' <i>from JavaScript!</i>';
+    h1.innerHTML += ' <i>from JavaScript!</i>';
 }
 
-// CLOCK
+// Годинник
 function updateClock() {
     const clock = document.querySelector('.clock');
-    clock.innerText = new Date().toLocateTimeString();
+    clock.innerText = new Date().toLocaleTimeString();
 }
 setInterval(updateClock, 1000);
 

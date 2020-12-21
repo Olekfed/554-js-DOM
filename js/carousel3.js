@@ -8,9 +8,9 @@ const images = [
 
 let currentIdx = 0;
 function showCurrent() {
-    const imgElement1 = document.querySelector('.courusel3 .img1');
-    const imgElement2 = document.querySelector('.courusel3 .img2');
-    const imgElement3 = document.querySelector('.courusel3 .img3');
+    const imgElement1 = document.querySelector('.carousel3 .img1');
+    const imgElement2 = document.querySelector('.carousel3 .img2');
+    const imgElement3 = document.querySelector('.carousel3 .img3');
         const idx2 = currentIdx + 1 >= images.length ? 0 : currentIdx + 1;
         const idx3 = idx2 + 1 > images.length ? 0 : idx2 + 1;
         imgElement1.src = images[currentIdx];
@@ -30,7 +30,7 @@ function showNext() {
 
 setInterval(showNext, 3000);
 
-document.querySelector('.courusel.next').addEventListener('click', showNext);
-document.querySelector('.courusel.prev').addEventListener('click', showPrev);
+document.querySelector('.carousel.next').addEventListener('click', showNext);
+document.querySelector('.carousel.prev').addEventListener('click', showPrev);
 showCurrent();
 }
