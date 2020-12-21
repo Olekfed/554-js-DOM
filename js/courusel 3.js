@@ -1,15 +1,17 @@
+{
 const images = [
     'img/logistic.jpg',
-    'img/drop.png'
+    'img/drop.png',
+    'img/waves.png',
+    'img/soft-water.jpg'
 ]
 
-let currentInx = 0;
+let currentIdx = 0;
 function showCurrent() {
     const imgElement1 = document.querySelector('.courusel3 .img1');
     const imgElement2 = document.querySelector('.courusel3 .img2');
     const imgElement3 = document.querySelector('.courusel3 .img3');
-    imgElement1.src = images[currentIdx];
-      const idx2 = currentIdx + 1 >= images.length ? 0 : currentIdx + 1;
+        const idx2 = currentIdx + 1 >= images.length ? 0 : currentIdx + 1;
         const idx3 = idx2 + 1 > images.length ? 0 : idx2 + 1;
         imgElement1.src = images[currentIdx];
         imgElement2.src = images[idx2];
@@ -29,5 +31,6 @@ function showNext() {
 setInterval(showNext, 3000);
 
 document.querySelector('.courusel.next').addEventListener('click', showNext);
-document.querySelector('.courusel.prev').addEventListener('click', showNext);
+document.querySelector('.courusel.prev').addEventListener('click', showPrev);
 showCurrent();
+}
